@@ -1,0 +1,88 @@
+{
+    "version": 1,
+    "disable_existing_loggers": true,
+    "loggers": {
+        "TestRun": {
+            "level": "DEBUG",
+            "handlers": [
+                "streamhandler",
+                "TestRun"
+            ],
+            "propagate": 0
+        },
+        "TestRailApi": {
+            "level": "DEBUG",
+            "handlers": [
+                "streamhandler",
+                "TestRailApi"
+            ],
+            "propagate": 0
+        },
+        "SOBank": {
+            "level": "DEBUG",
+            "handlers": [
+                "streamhandler",
+                "SOBank"
+            ],
+            "propagate": 0
+        },
+        "Mailer": {
+            "level": "DEBUG",
+            "handlers": [
+                "streamhandler",
+                "Mailer"
+            ],
+            "propagate": 0
+        }
+    },
+    "formatters": {
+        "stream": {
+            "level": "DEBUG",
+            "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+        },
+        "file": {
+            "level": "DEBUG",
+            "format": "%(asctime)s - %(name)s.LineNum:%(lineno)d.Func:%(funcName)s - %(levelname)s - %(message)s\n"
+        }
+    },
+    "handlers": {
+        "streamhandler": {
+            "class": "logging.StreamHandler",
+            "level": "INFO",
+            "formatter": "stream",
+            "stream": "ext://sys.stdout"
+        },
+        "TestRun": {
+            "class": "logging.handlers.TimedRotatingFileHandler",
+            "filename": "test/logs/TestRun.log",
+            "formatter": "file",
+            "level": "DEBUG",
+            "when":"midnight",
+            "backupCount":3
+        },
+        "TestRailApi": {
+            "class": "logging.handlers.TimedRotatingFileHandler",
+            "filename": "test/logs/TestRailApi.log",
+            "formatter": "file",
+            "level": "DEBUG",
+            "when":"midnight",
+            "backupCount":3
+        },
+        "SOBank": {
+            "class": "logging.handlers.TimedRotatingFileHandler",
+            "filename": "test/logs/SOBank.log",
+            "formatter": "file",
+            "level": "DEBUG",
+            "when":"midnight",
+            "backupCount":3
+        },
+        "Mailer": {
+            "class": "logging.handlers.TimedRotatingFileHandler",
+            "filename": "test/logs/Mailer.log",
+            "formatter": "file",
+            "level": "DEBUG",
+            "when":"midnight",
+            "backupCount":3
+        }
+    }
+}

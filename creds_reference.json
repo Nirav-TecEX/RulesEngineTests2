@@ -1,0 +1,10 @@
+{
+    "Flask-TestRailAPI": {"service_name":"Flask-TestRailAPI", "username":"niravs@tecex.com"},
+    "Flask-SalesforceSuDoPassword": {"service_name":"Flask-SalesforceSuDoPassword", "username":"test_primary@tecex.com"},
+    "Flask-SalesforceSuDoAPIKey": {"service_name":"Flask-SalesforceSuDoAPIKey", "username":"test_primary@tecex.com"},
+    "Flask-LambdaTest": {"service_name":"Flask-LambdaTest", "username":"kobusp"},
+    "Flask-SFToken": {"service_name":"Flask-SFToken", "username":"test_csi@tecexlabs.dev"},
+    "Flask-ClientUsers": {"service_name":"Flask-ClientUsers", "username":"all_users@testing_clients.com"},
+    "Flask-EmailUser":{"service_name":"Flask-EmailUser", "username":"niravs@tecex.com"},
+    "GitLabUser-FlaskToken":{"service_name":"GitLabUser-FlaskToken", "username":"niravs@tecex.com"}
+}
